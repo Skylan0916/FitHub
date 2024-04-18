@@ -5,10 +5,35 @@
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
 
 <script>
-    let data = {{ data| tojson }}
-    console.log(data)
+    let quiz = {{ quiz| tojson }}
+    let current_index = {{ current_index | tojson }}
+    let total = {{ total | tojson }}
+    console.log(quiz)
 </script>
 
 <b>Quiz Page</b>
+
+<h3>Progress: {{ current_index+1 }}/{{ total }}</h3>
+
+<h3>{{ quiz.question }}</h3>
+
+<h3>Hint: {{ quiz.hint }}</h3>
+
+<img src={{ quiz.url }}>
+
+{% for choice in quiz.choices %}
+    <div data-id={{choice.id}}>
+        <img src={{ choice.url }}>
+        <h3>{{ choice.answer }}</h3>
+    </div>
+{% endfor %}
+
+<!-- Button to the next exercise -->
+{% if current_index < total - 1 %}
+    <a href="/quiz/{{ current_index+1 }}" class="button">Submit</a>
+{% else %}
+    <a href="/" class="button">Submit</a>
+{% endif %}
+
 
 {% endblock %}

@@ -9,6 +9,8 @@ Overview placeholder
 
 **Step 1**
 
+Run the following command in terminal
+
 `python3 server.py`
 
 **Step 2**

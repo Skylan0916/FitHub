@@ -3,10 +3,12 @@ from flask import render_template
 from flask import Response, request, jsonify
 
 from data.learn import muscle_groups, exercises
+from data.quiz import quizzes
 
 app = Flask(__name__)
 
 completed_dict = {group["name"]: False for group in muscle_groups}
+current_quiz_index = 0
 
 
 @app.route('/')
@@ -35,10 +37,13 @@ def learn_exercise(muscle_group, index):
     return render_template('exercise.html', exercise=exercise, muscle_group=muscle_group, current_index=index, total=total)
 
 
-@app.route('/quiz')
-def quiz():
-    data = None
-    return render_template('quiz.html', data=data) 
+@app.route('/quiz/<index>', methods=['GET', 'POST'])
+def quiz(index):
+    index = int(index)
+    quiz = quizzes[index]
+    total = len(quizzes)
+
+    return render_template('quiz.html', quiz=quiz, current_index=index, total=total) 
 
 
 if __name__ == '__main__':
