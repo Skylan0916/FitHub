@@ -5,11 +5,21 @@
 <script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
 
 <script>
-    let title = {{ title | tojson}}
-    let data = {{ data | tojson}}
-    console.log(data)
+    let muscle_groups = {{ muscle_groups | tojson }}
+    let n_completed = {{ n_completed | tojson }}
+    let total = {{ total | tojson }}
+    console.log(muscle_groups)
 </script>
 
-<b>Learn Page</b>
+<h1>Workout Exercises</h1>
+<h3>Please select one of the muscle groups</h3>
+<h3>Progress: {{ n_completed }}/{{ total }}</h3>
+
+{% for muscle_group in muscle_groups %}
+    <div class="muscle_group" data-id={{muscle_group.name}}>
+        <img src={{ muscle_group.url }}>
+        <h2>{{ muscle_group.name }}</h2>
+    </div>
+{% endfor %}
 
 {% endblock %}

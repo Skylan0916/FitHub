@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
+
+<script>
+    let exercise = {{ exercise | tojson }}
+    let muscle_group = {{ muscle_group | tojson }}
+    let current_index = {{ current_index | tojson }}
+    let total = {{ total | tojson }}
+    console.log(exercise)
+</script>
+
+<h1>{{ muscle_group }} Exercises</h1>
+<h3>Progress: {{ current_index+1 }}/{{ total }}</h3>
+
+<iframe width="800" height="450" src={{ exercise.url }}></iframe>
+
+<h1>{{ exercise.name }}</h1>
+
+<h3>Target Muscle Group: {{ exercise.primary }}</h3>
+
+<h3>Secondary Muscles:</h3>
+<ul>
+  {% for muscle in exercise.secondary %}
+    <li>{{ muscle }}</li>
+  {% endfor %}
+</ul>
+
+<h3>Equipment: {{ exercise.equipment }}</h3>
+
+<h4>{{ exercise.description }}</h3>
+
+<!-- Button to the previous exercise -->
+{% if current_index > 0 %}
+    <a href="/learn/{{ muscle_group }}/{{ current_index-1 }}" class="button">Previous</a>
+{% endif %}
+
+<!-- Button to the next exercise -->
+{% if current_index < total - 1 %}
+    <a href="/learn/{{ muscle_group }}/{{ current_index+1 }}" class="button">Next</a>
+{% endif %}
+
+<!-- Button to mark the section as complete -->
+{% if current_index == total - 1 %}
+    <button class="button complete_btn" data-id={{ muscle_group }}>Complete</button>
+{% endif %}
+
+{% endblock %}
