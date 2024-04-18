@@ -37,9 +37,9 @@ exercises = {
             "description": "This is a staple chest exercise in nearly every workout program. For powerlifters, it is known as one of the big three which includes squat, deadlift, and bench press. For athletes, 1 rep max on bench press is a good indicator on performance. And for bodybuilders, it is a compound exercise that targets many muscles in the upper body.",
         },
         {
-            # https://www.muscleandstrength.com/exercises/cable-chest-press.html
-            "name": "Chest Press",
-            "url": "https://www.youtube.com/embed/n4CEULDvATA",
+            # https://www.muscleandstrength.com/exercises/cable-crossovers-bent-over.html
+            "name": "Cable Fly",
+            "url": "https://www.youtube.com/embed/JHqmhZ12rr0",
             "primary": "Chest",
             "secondary": ["Shoulders", "Triceps"],
             "equipment": "Cable",
