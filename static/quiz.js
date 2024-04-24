@@ -6,8 +6,6 @@ $(document).ready(function () {
         const id = $(this).data('id');
         var img = this.querySelector('img');
 
-        console.log(img)
-
         if (selectedChoices.includes(id)) {
             selectedChoices = selectedChoices.filter(x => x !== id);
             img.classList.remove('selected');
