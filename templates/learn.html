@@ -8,7 +8,7 @@
     let muscle_groups = {{ muscle_groups | tojson }}
     let n_completed = {{ n_completed | tojson }}
     let total = {{ total | tojson }}
-    console.log(muscle_groups)
+    let completed_sections = {{ completed_sections | tojson }}
 </script>
 
 <!-- Header -->
@@ -34,7 +34,12 @@
 <div class="row">
     {% for muscle_group in muscle_groups %}
     <div class="muscle-group col-md-4 col-sm-6 padding-vertical" data-id={{muscle_group.name}}>
-        <img class="image" src={{ muscle_group.url }}>
+        {% if muscle_group.name in completed_sections %}
+            {% set completed = True %}
+        {% else %}
+            {% set completed = False %}
+        {% endif %}
+        <img class="image" src={{ muscle_group.url }} data-completed={{ completed }}>
         <div class="subtitle align-center">{{ muscle_group.name }}</div>
     </div>
     {% endfor %}

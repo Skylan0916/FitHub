@@ -29,8 +29,9 @@ def home():
 def learn():
     total = len(completed_dict)
     n_completed = sum(1 for value in completed_dict.values() if value)
+    completed_sections = [key for key, value in completed_dict.items() if value is True]
 
-    return render_template('learn.html', muscle_groups=muscle_groups, n_completed=n_completed, total=total)
+    return render_template('learn.html', muscle_groups=muscle_groups, n_completed=n_completed, total=total, completed_sections=completed_sections)
 
 
 @app.route('/learn/<muscle_group>/<index>', methods=['GET'])
