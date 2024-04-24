@@ -3,6 +3,7 @@
 {% block content %}
 
 <script type="text/javascript" src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/@simondmc/popup-js@1.4.3/popup.min.js"></script>
 
 <script>
     let quiz = {{ quiz | tojson }}
@@ -44,7 +45,7 @@
 <!-- Button -->
 <div class="row">
     <div class="col-md-12 center">
-        <button class="submit_btn button" data-index={{ current_index }} data-total={{ total }} data-total={{ total }} data-solutions="{{ quiz.solutions }}">Submit</button>
+        <button class="submit_btn button" data-index={{ current_index }} data-total={{ total }} data-total={{ total }} data-solutions="{{ quiz.solutions }}" data-answer="{{ quiz.answer }}">Submit</button>
     </div>
 </div>
 
