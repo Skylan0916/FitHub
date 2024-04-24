@@ -46,7 +46,7 @@
 
 /* Media */
 .image {
-    max-width: 100%;
+    max-width: 96%;
     height: auto;
     display: block;
     border-radius: 2rem;
@@ -59,6 +59,27 @@
     display: block;
     border: none;
     border-radius: 2rem;
+}
+
+.hint {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-left: 45%;
+}
+
+.hint:hover {
+    transform: scale(1.1);
+}
+
+.question-image {
+    width: 450px;
+    height: 280px;
+    display: block;
+    border-radius: 2rem;
+    -webkit-user-drag: none;
 }
 
 

@@ -90,4 +90,11 @@ $(document).ready(function () {
         displayFeedback(scored, answer);
     });
 
+    // Hint
+    $(document).on("click", ".hint", function () {
+        const hint = $(this).data("hint");
+        console.log(hint)
+        display(hint);
+    });
+
 })

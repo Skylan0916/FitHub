@@ -19,14 +19,23 @@
     </div>
 </div>
 
+
 <div class="row">
     <!-- Question -->
     <div class="col-md-5 col-sm-12">
-        <div class="subtitle">{{ quiz.question }}</div>
+        <div class="row">
+            <div class="title padding-vertical">
+                {{ quiz.question }}
+            </div>
+        </div>
 
-        <div class="information padding-vertical">Hint: {{ quiz.hint }}</div>
+        <div class="row">
+            <img class="question-image" src={{ quiz.url }}>
+        </div>
 
-        <img class="image" src={{ quiz.url }}>
+        <div class="row padding-vertical">
+            <img class="hint" data-hint="{{ quiz.hint }}" src="https://st3.depositphotos.com/5266903/13057/i/450/depositphotos_130576912-stock-photo-electric-bulb-flat-rounded-glyph.jpg"></img>
+        </div>
     </div>
 
     <!-- Choices -->
