@@ -11,15 +11,42 @@
     console.log(muscle_groups)
 </script>
 
-<h1>Workout Exercises</h1>
-<h3>Please select one of the muscle groups</h3>
-<h3>Progress: {{ n_completed }}/{{ total }}</h3>
-
-{% for muscle_group in muscle_groups %}
-    <div class="muscle_group" data-id={{muscle_group.name}}>
-        <img src={{ muscle_group.url }}>
-        <h2>{{ muscle_group.name }}</h2>
+<!-- Header -->
+<div class="padding-vertical">
+    <div class="row">
+        <div class="title col-md-12">Workout Exercises</div>
     </div>
-{% endfor %}
+
+    <div class="row">
+        {% if n_completed == total %}
+            {% set message = "Great work!" %}
+        {% elif n_completed > total / 2 %}
+            {% set message = "Almost there!" %}
+        {% else %}
+            {% set message = "Please select one of the muscle groups" %}
+        {% endif %}
+        <div class="message col-md-9">{{ message }}</div>
+        <div class="message col-md-3 align-right">Progress: {{ n_completed }}/{{ total }}</div>
+    </div>
+</div>
+
+<!-- Muscle groups -->
+<div class="row">
+    {% for muscle_group in muscle_groups %}
+    <div class="muscle-group col-md-4 col-sm-6 padding-vertical" data-id={{muscle_group.name}}>
+        <img class="image" src={{ muscle_group.url }}>
+        <div class="subtitle align-center">{{ muscle_group.name }}</div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Button -->
+{% if n_completed == total %}
+<div class="row">
+    <div class="col-md-12 center">
+        <a href="/quiz" class="button">Start Quiz</a>
+    </div>
+</div>
+{% endif %}
 
 {% endblock %}

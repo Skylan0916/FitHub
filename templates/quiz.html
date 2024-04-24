@@ -11,22 +11,41 @@
     console.log(quiz)
 </script>
 
-<h3>Progress: {{ current_index+1 }}/{{ total }}</h3>
-
-<h3>{{ quiz.question }}</h3>
-
-<h3>Hint: {{ quiz.hint }}</h3>
-
-<img src={{ quiz.url }}>
-
-{% for choice in quiz.choices %}
-    <div class="choice" data-id={{choice.id}}>
-        <img src={{ choice.url }}>
-        <h3>{{ choice.answer }}</h3>
+<!-- Progress -->
+<div class="padding-vertical">
+    <div class="row">
+      <div class="message col-md-12 align-right">Progress: {{ current_index+1 }}/{{ total }}</div>
     </div>
-{% endfor %}
+</div>
 
-<!-- Button to the next exercise -->
-<button class="submit_btn button" data-index={{current_index}} data-total={{total}} data-total={{total}} data-solutions="{{ quiz.solutions }}">Submit</button>
+<div class="row">
+    <!-- Question -->
+    <div class="col-md-5 col-sm-12">
+        <div class="subtitle">{{ quiz.question }}</div>
+
+        <div class="information padding-vertical">Hint: {{ quiz.hint }}</div>
+
+        <img class="image" src={{ quiz.url }}>
+    </div>
+
+    <!-- Choices -->
+    <div class="col-md-7 col-sm-12">
+        <div class="row">
+            {% for choice in quiz.choices %}
+            <div class="col-md-6 padding-vertical choice" data-id={{ choice.id }}>
+                <img class="image" src={{ choice.url }}>
+                <div class="information align-center">{{ choice.answer }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Button -->
+<div class="row">
+    <div class="col-md-12 center">
+        <button class="submit_btn button" data-index={{ current_index }} data-total={{ total }} data-total={{ total }} data-solutions="{{ quiz.solutions }}">Submit</button>
+    </div>
+</div>
 
 {% endblock %}

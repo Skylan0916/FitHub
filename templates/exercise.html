@@ -5,46 +5,83 @@
 <script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
 
 <script>
-    let exercise = {{ exercise | tojson }}
-    let muscle_group = {{ muscle_group | tojson }}
-    let current_index = {{ current_index | tojson }}
-    let total = {{ total | tojson }}
-    console.log(exercise)
+  let exercise = {{ exercise | tojson }}
+  let muscle_group = {{ muscle_group | tojson }}
+  let current_index = {{ current_index | tojson }}
+  let total = {{ total | tojson }}
+  console.log(exercise)
 </script>
 
-<h1>{{ muscle_group }} Exercises</h1>
-<h3>Progress: {{ current_index+1 }}/{{ total }}</h3>
+<!-- Header -->
+<div class="padding-vertical">
+  <div class="row">
+    <div class="title col-md-12">{{ muscle_group }} Exercises</div>
+  </div>
 
-<iframe width="800" height="450" src={{ exercise.url }}></iframe>
+  <div class="row">
+    <div class="message col-md-12 align-right">Progress: {{ current_index+1 }}/{{ total }}</div>
+  </div>
+</div>
 
-<h1>{{ exercise.name }}</h1>
+<!-- Exercise Information -->
+<div class="row">
 
-<h3>Target Muscle Group: {{ exercise.primary }}</h3>
+  <div class="col-xl-7 col-lg-12 col-md-12 col-sm-12">
+    <iframe class="video" src={{ exercise.url }} allow="fullscreen;"></iframe>
+  </div>
 
-<h3>Secondary Muscles:</h3>
-<ul>
-  {% for muscle in exercise.secondary %}
-    <li>{{ muscle }}</li>
-  {% endfor %}
-</ul>
+  <div class="col-xl-5 col-lg-12 ol-md-12 col-sm-12">
 
-<h3>Equipment: {{ exercise.equipment }}</h3>
+    <div class="title">{{ exercise.name }}</div>
 
-<h4>{{ exercise.description }}</h3>
+    <div class="row information padding-vertical">
+      <div class="col-md-6">Target Muscle Group</div>
+      <div class="col-md-6">{{ exercise.primary }}</div>
+    </div>
 
-<!-- Button to the previous exercise -->
-{% if current_index > 0 %}
-    <a href="/learn/{{ muscle_group }}/{{ current_index-1 }}" class="button">Previous</a>
-{% endif %}
+    <div class="row information">
+      <div class="col-md-6">Secondary Muscle</div>
+      <div class="col-md-6">
+        {% set muscles = exercise.secondary %}
+        {% if muscles %}
+          {% set muscles_str = muscles | join(', ') %}
+          {{ muscles_str }}
+        {% else %}
+          None
+        {% endif %}
+      </div>
+    </div>
 
-<!-- Button to the next exercise -->
-{% if current_index < total - 1 %}
-    <a href="/learn/{{ muscle_group }}/{{ current_index+1 }}" class="button">Next</a>
-{% endif %}
+    <div class="row information padding-vertical">
+      <div class="col-md-6">Equipment</div>
+      <div class="col-md-6">{{ exercise.equipment }}</div>
+    </div>
 
-<!-- Button to mark the section as complete -->
-{% if current_index == total - 1 %}
-    <button class="button complete_btn" data-id={{ muscle_group }}>Complete</button>
-{% endif %}
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 information padding-vertical">{{ exercise.description }}</div>
+</div>
+
+<!-- Buttons -->
+<div class="row">
+  <div class="col-md-12 center">
+    <!-- Previous exercise -->
+    {% if current_index > 0 %}
+      <a href="/learn/{{ muscle_group }}/{{ current_index-1 }}" class="button">Previous</a>
+    {% endif %}
+
+    <!-- Next exercise -->
+    {% if current_index < total - 1 %}
+      <a href="/learn/{{ muscle_group }}/{{ current_index+1 }}" class="button">Next</a>
+    {% endif %}
+
+    <!-- Mark complete -->
+    {% if current_index == total - 1 %}
+      <button data-id={{ muscle_group }} class="button complete-btn">Complete</button>
+    {% endif %}
+  </div>
+</div>
 
 {% endblock %}

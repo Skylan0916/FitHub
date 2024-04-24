@@ -1,3 +1,115 @@
-.button {
+/* Format */
+.padding-vertical {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
 
+.padding-horizontal {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+
+/* Text */
+.nav {
+    font-size: 32px;
+    padding-right: 6rem !important;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.message {
+    font-size: 24px;
+    color: #787878;
+}
+
+.information {
+    font-size: 20px;
+}
+
+
+/* Media */
+.image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 2rem;
+}
+
+.video {
+    width: 640px;
+    height: 360px;
+    display: block;
+    border: none;
+    border-radius: 2rem;
+}
+
+
+/* Button */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #0063b3;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Muscle Group */
+.muscle-group {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.muscle-group:hover {
+    transform: scale(1.1);
+}
+
+
+/* Choice */
+.choice {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.choice:hover {
+    transform: scale(1.1);
+}
+
+.selected {
+    border: 5px solid #007bff;
+    border-radius: 2rem;
 }
