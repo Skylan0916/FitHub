@@ -1,6 +1,6 @@
 quizzes = [
     {
-        "question": "what is the primary target muscle group of this exercise?",
+        "question": "What is the primary target muscle group of this exercise?",
         "hint": "Try the workout motion and feel each of the muscle groups.",
         "solutions": [2],
         "url": "https://cdn.muscleandstrength.com/sites/default/files/straight-bar-tricep-extension-1.jpg",
