@@ -47,8 +47,22 @@ $(document).ready(function () {
     // Handle choice selection
     $(document).on("click", ".choice", function () {
         const id = $(this).data("id");
+        const solutions = $(this).data("solutions");
         var img = this.querySelector("img");
+    
+        console.log(solutions)
 
+        // Deselect all other choices if it's not a multiple choice question
+        if (solutions.length === 1) {
+            $(".choice").each(function() {
+                const otherId = $(this).data("id");
+                if (otherId !== id && selectedChoices.includes(otherId)) {
+                    selectedChoices = selectedChoices.filter(x => x !== otherId);
+                    this.querySelector("img").classList.remove("selected");
+                }
+            });
+        }
+    
         if (selectedChoices.includes(id)) {
             selectedChoices = selectedChoices.filter(x => x !== id);
             img.classList.remove("selected");
