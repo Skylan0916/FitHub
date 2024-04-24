@@ -52,12 +52,11 @@ def complete_section():
 
 @app.route('/quiz', methods=['GET'])
 def quiz():
-    quiz = quizzes[quiz_index]
     total = len(quizzes)
-
-    if quiz_index >= total - 1:
+    if quiz_index >= total:
         return render_template('result.html', score=score)
 
+    quiz = quizzes[quiz_index]
     return render_template('quiz.html', quiz=quiz, current_index=quiz_index, total=total)
 
 
