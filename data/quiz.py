@@ -1,9 +1,9 @@
 quizzes = [
     {
         "question": "What is the primary target muscle group of this exercise?",
-        "hint": "Try the workout motion and feel each of the muscle groups.",
+        "hint": "Try the workout motion and feel the muscle groups.",
         "solutions": [2],
-        "answer": "This is a variation of the Tricep Extension, and an exercise used to build the muscles of the triceps.",
+        "answer": "This is a variation of the Tricep Extension, an exercise used to build the muscles of the triceps.",
         "url": "https://cdn.muscleandstrength.com/sites/default/files/straight-bar-tricep-extension-1.jpg",
         "choices": [
             {
@@ -59,9 +59,9 @@ quizzes = [
     },
     {
         "question": "What is the primary target muscle group of this exercise?",
-        "hint": "Try the workout motion and feel each of the muscle groups.",
+        "hint": "Try the workout motion and feel the muscle groups.",
         "solutions": [3],
-        "answer": "The Seated Barbell Shoulder Press is a variation of the overhead press, and an exercise used to build shoulder strength and muscle.",
+        "answer": "The Seated Barbell Shoulder Press is a variation of the overhead press, an exercise used to build shoulder strength and muscle.",
         "url": "https://cdn.muscleandstrength.com/sites/default/files/seated-shoulder-press-1.jpg",
         "choices": [
             {
@@ -88,7 +88,7 @@ quizzes = [
     },
     {
         "question": "Which exercise does not involve hamstrings?",
-        "hint": "Try all the workout motions while touching your hamstrings.",
+        "hint": "Try all the workout motions while touching hamstrings.",
         "solutions": [1],
         "answer": "Leg Extension is an isolation exercise used to target the quads only. All other exercises involve hamstrings.",
         "url": "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/hamstrings_0.jpg",
@@ -175,7 +175,7 @@ quizzes = [
     },
     {
         "question": "Which exercises primarily target the quads?",
-        "hint": "Try the workout motion and feel each of the muscle groups.",
+        "hint": "Try the workout motion and feel the muscle groups.",
         "solutions": [0, 1],
         "answer": "Squat and Leg Press directly target the quads. Leg Curl is an isolation exercise for the hamstrings, and Stiff Leg Deadlift primarily targets the hamstrings.",
         "url": "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/quads_1.jpg",
@@ -233,9 +233,9 @@ quizzes = [
     },
     {
         "question": "What is the primary target muscle group of stiff leg deadlift?",
-        "hint": "Try the workout motion and feel each of the muscle groups.",
+        "hint": "Try the workout motion and feel the muscle groups.",
         "solutions": [1],
-        "answer": "Stiff Leg Deadlift is a variation of the deadlift, and an exercise used primarily to target the hamstrings.",
+        "answer": "Stiff Leg Deadlift is a variation of the deadlift, an exercise used primarily to target the hamstrings.",
         "url": "https://cdn.muscleandstrength.com/sites/default/files/stiff-leg-deadlifts.jpg",
         "choices": [
             {
@@ -261,7 +261,7 @@ quizzes = [
         ]
     },
     {
-        "question": "Time to train shoulders! What exercises should you consider? Select all that applies.",
+        "question": "Time to train shoulders! What exercises should you consider?",
         "hint": "Think about the direction of movement for each exercise.",
         "solutions": [2, 3],
         "answer": "Rear Delt Fly and Upright Row are the the correct answers. Bent Over Row and Machine T-Bar Row barely involve the shoulders and mainly target the upper back.",
