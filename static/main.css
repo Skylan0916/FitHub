@@ -50,6 +50,7 @@
     height: auto;
     display: block;
     border-radius: 2rem;
+    -webkit-user-drag: none;
 }
 
 .video {
