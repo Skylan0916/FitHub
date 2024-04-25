@@ -2,7 +2,13 @@
 ## Name: Tian(Peter) Lan
 ## UNI: tl3150
 
-Overview placeholder
+Welcome to FitHub! In just 10 minutes, you can learn a variety of workout exercises designed to target different muscle groups, helping you to reach your fitness and physique goals.
+
+
+Whether you're a beginner looking to master the basics or a seasoned pro seeking to diversify your workout routine, Fithub has something for everyone.
+
+
+Let's embark on this journey to a healthier, stronger you with FitHub!
 
 
 ## Instruction
