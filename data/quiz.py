@@ -1,7 +1,7 @@
 quizzes = [
     {
         "question": "What is the primary target muscle group of this exercise?",
-        "hint": "Try the workout motion and feel the muscle groups.",
+        "hint": "Simulate this exercise and feel the muscle groups.",
         "solutions": [2],
         "answer": "This is a variation of the Tricep Extension, an exercise used to build the muscles of the triceps.",
         "url": "https://cdn.muscleandstrength.com/sites/default/files/straight-bar-tricep-extension-1.jpg",
@@ -29,8 +29,8 @@ quizzes = [
         ]
     },
     {
-        "question": "It's chest day! Which exercises should you consider adding to your workout routine? Select all that applies.",
-        "hint": "Chest exercise involves pushing rather than pulling.",
+        "question": "It's chest day! Which exercises should you consider adding to your workout? Select all that applies.",
+        "hint": "Chest exercises involve pushing movements rather than pulling movements.",
         "solutions": [0, 3],
         "answer": "Chest exercises focus on pushing movements, while back exercises involve pulling actions. The correct answers are Bench Press and Standing Cable Fly. Lat Pull Down and Seated Cable Row target the back muscles.",
         "url": "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/chest_0.jpg",
@@ -59,7 +59,7 @@ quizzes = [
     },
     {
         "question": "What is the primary target muscle group of this exercise?",
-        "hint": "Try the workout motion and feel the muscle groups.",
+        "hint": "Simulate this exercise and feel the muscle groups.",
         "solutions": [3],
         "answer": "The Seated Barbell Shoulder Press is a variation of the overhead press, an exercise used to build shoulder strength and muscle.",
         "url": "https://cdn.muscleandstrength.com/sites/default/files/seated-shoulder-press-1.jpg",
@@ -88,7 +88,7 @@ quizzes = [
     },
     {
         "question": "Which exercise does not involve hamstrings?",
-        "hint": "Try all the workout motions while touching hamstrings.",
+        "hint": "Simulate all the exercises while touching your hamstrings.",
         "solutions": [1],
         "answer": "Leg Extension is an isolation exercise used to target the quads only. All other exercises involve hamstrings.",
         "url": "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/hamstrings_0.jpg",
@@ -175,7 +175,7 @@ quizzes = [
     },
     {
         "question": "Which exercises primarily target the quads? Select all that applies.",
-        "hint": "Try the workout motion and feel the muscle groups.",
+        "hint": "Simulate all the exercises and feel the muscle groups.",
         "solutions": [0, 1],
         "answer": "Squat and Leg Press directly target the quads. Leg Curl is an isolation exercise for the hamstrings, and Stiff Leg Deadlift primarily targets the hamstrings.",
         "url": "https://cdn.muscleandstrength.com/sites/default/files/taxonomy/image/videos/quads_1.jpg",
@@ -204,7 +204,7 @@ quizzes = [
     },
     {
         "question": "What muscle groups are involved in squat? Select all that applies.",
-        "hint": "Is this exercise for upper body or lower body?",
+        "hint": "Is this exercise for the upper body or the lower body?",
         "solutions": [2, 3],
         "answer": "Squat directly targets the muscles of the quads, but also involves the hamstrings, glutes, back, and core as well as muscles of the shoulders and arms to a lesser degree.",
         "url": "https://cdn.muscleandstrength.com/sites/default/files/barbell-back-squat.jpg",
@@ -233,7 +233,7 @@ quizzes = [
     },
     {
         "question": "What is the primary target muscle group of stiff leg deadlift?",
-        "hint": "Try the workout motion and feel the muscle groups.",
+        "hint": "Simulate this exercise and feel the muscle groups.",
         "solutions": [1],
         "answer": "Stiff Leg Deadlift is a variation of the deadlift, an exercise used primarily to target the hamstrings.",
         "url": "https://cdn.muscleandstrength.com/sites/default/files/stiff-leg-deadlifts.jpg",
