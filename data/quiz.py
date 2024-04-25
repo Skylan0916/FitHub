@@ -29,7 +29,7 @@ quizzes = [
         ]
     },
     {
-        "question": "It's chest day! Which exercises should you consider adding to your workout routine?",
+        "question": "It's chest day! Which exercises should you consider adding to your workout routine? Select all that applies.",
         "hint": "Chest exercise involves pushing rather than pulling.",
         "solutions": [0, 3],
         "answer": "Chest exercises focus on pushing movements, while back exercises involve pulling actions. The correct answers are Bench Press and Standing Cable Fly. Lat Pull Down and Seated Cable Row target the back muscles.",
@@ -116,7 +116,7 @@ quizzes = [
         ]
     },
     {
-        "question": "What are the muscle groups involved for this exercise?",
+        "question": "What are the muscle groups involved for this exercise? Select all that applies.",
         "hint": "This exercise has a pushing motion, and there are several muscles indirectly worked.",
         "solutions": [1, 2, 3],
         "answer": "Chest Dip is a great exercise to use to target the chest. It will also indirectly work the muscles of the triceps and shoulders.",
@@ -145,7 +145,7 @@ quizzes = [
         ]
     },
     {
-        "question": "Which exercises primarily target the upper back?",
+        "question": "Which exercises primarily target the upper back? Select all that applies.",
         "hint": "One of those exercises trains shoulders instead.",
         "solutions": [0, 1, 2],
         "answer": "All exercises except Upright Row primarily target the upper back. Although Upright Row involves the upper back, it is an exercise used to build the muscles of the shoulder.",
@@ -174,7 +174,7 @@ quizzes = [
         ]
     },
     {
-        "question": "Which exercises primarily target the quads?",
+        "question": "Which exercises primarily target the quads? Select all that applies.",
         "hint": "Try the workout motion and feel the muscle groups.",
         "solutions": [0, 1],
         "answer": "Squat and Leg Press directly target the quads. Leg Curl is an isolation exercise for the hamstrings, and Stiff Leg Deadlift primarily targets the hamstrings.",
@@ -203,7 +203,7 @@ quizzes = [
         ]
     },
     {
-        "question": "What muscle groups are involved in squat?",
+        "question": "What muscle groups are involved in squat? Select all that applies.",
         "hint": "Is this exercise for upper body or lower body?",
         "solutions": [2, 3],
         "answer": "Squat directly targets the muscles of the quads, but also involves the hamstrings, glutes, back, and core as well as muscles of the shoulders and arms to a lesser degree.",
@@ -261,7 +261,7 @@ quizzes = [
         ]
     },
     {
-        "question": "Time to train shoulders! What exercises should you consider?",
+        "question": "Time to train shoulders! What exercises should you consider? Select all that applies.",
         "hint": "Think about the direction of movement for each exercise.",
         "solutions": [2, 3],
         "answer": "Rear Delt Fly and Upright Row are the the correct answers. Bent Over Row and Machine T-Bar Row barely involve the shoulders and mainly target the upper back.",
