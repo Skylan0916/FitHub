@@ -55,7 +55,7 @@ def complete_section():
 def quiz():
     total = len(quizzes)
     if quiz_index >= total:
-        return render_template('result.html', score=score)
+        return render_template('result.html', score=score, total=total)
 
     quiz = quizzes[quiz_index]
     return render_template('quiz.html', quiz=quiz, current_index=quiz_index, total=total)
