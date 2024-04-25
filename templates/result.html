@@ -1,9 +1,48 @@
-<script>
-    let score = {{ score | tojson }}
-</script>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
 
-<b>Result Page</b>
-<b>Score: {{ score }}</b>
-<br/>
-<a href="/" class="button">Restart</a>
+    <!-- jquery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+    <script type="text/javascript" src="{{ url_for('static', filename = 'result.js') }}"></script>
+
+    <script>
+        let score = {{ score | tojson }}
+        let total = {{ total | tojson }}
+    </script>
+
+    <title>FitHub</title>
+</head>
+
+<body>
+    <div class="home-container">
+        {% if score >= 0.8 * total %}
+        {% set message = "EXCELLENT! " %}
+        {% elif score >= 0.5 * total %}
+        {% set message = "GREAT WORK! " %}
+        {% elif score >= 0.2 * total %}
+            {% set message = "NOT BAD! " %}
+        {% else %}
+            {% set message = "OH NO! " %}
+        {% endif %}
+
+        <div class="welcome">{{ message }} YOU GOT</div>
+        <div class="brand">{{ score }} out of {{ total }}</div>
+        <p class="information padding-vertical">With all the fundamental knowledge at your fingertips, it's time to hit the gym and carve out a better version of yourself.</p>
+        <div class="guide padding-vertical">Click anywhere to restart</div>
+    </div>
+</body>
+
+</html>
